@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DANA UI</string>
+    <string name="kembali">Kembali</string>
+    <string name="edit_profil">Edit Profil</string>
+    <string name="ketuk_untuk_mengubah_foto">Ketuk untuk mengubah foto</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="nomor_hp">Nomor HP</string>
+    <string name="simpan_perubahan">Simpan Perubahan</string>
+    <string name="pilih_gambar">Pilih Gambar</string>
+    <string name="profil_disimpan">Profil berhasil disimpan</string>
+    <string name="gagal_menyimpan">Gagal menyimpan profil</string>
+    <string name="saya">Saya</string>
+</resources>
