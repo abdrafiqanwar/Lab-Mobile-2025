@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:elevation="10dp"> <!-- Mengambang di atas konten -->
+
+        <!-- Kiri: Tombol back -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circle_transparent"
+            android:contentDescription="Kembali"
+            android:padding="8dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            app:tint="@android:color/white" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Kanan: Tombol search dan menu -->
+        <ImageButton
+            android:id="@+id/btnSearch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/telusuri"
+            android:contentDescription="Cari"
+            android:padding="8dp"
+            app:tint="@android:color/white" />
+
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/menu2"
+            android:contentDescription="Menu"
+            android:padding="8dp"
+            app:tint="@android:color/white" />
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="22dp"
+        android:backgroundTint="@color/blue"
+        android:contentDescription="Tambah"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:fabSize="normal"
+        android:elevation="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imghome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="Home Image"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Toolbar -->
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEditProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/btn_edit_profile"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Edit profil"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.944"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardView" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardprofile"
+                android:layout_width="93dp"
+                android:layout_height="93dp"
+                android:layout_marginTop="20dp"
+                android:translationX="15dp"
+                android:translationY="73dp"
+                app:cardCornerRadius="60dp"
+                app:cardElevation="4dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true"
+                tools:ignore="MissingConstraints">
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/circle"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true" />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/tvNama"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="51dp"
+                android:text="Abel Eka Putra"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#E7E9EA"
+                android:maxLines="2"
+                android:ellipsize="end"
+                app:layout_constraintTop_toBottomOf="@id/cardView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@AbelEkaput"
+                android:textColor="#71767B"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNama"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="3dp" />
+
+
+            <TextView
+                android:id="@+id/tvBio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:text="Elf penyihir yang mengarungi waktu, mencari makna dari perpisahan dan kenangan. | Selamat tinggal adalah awal dari cerita lain.🍃🕊️"
+                android:textColor="#E7E9EA"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvUsername" />
+
+
+            <TextView
+                android:id="@+id/tvInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="#E7E9EA"
+                android:textSize="14sp"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBio" />
+
+            <LinearLayout
+                android:id="@+id/tvbergabung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tvInfo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/iconLahir"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/kalender"
+                    android:layout_marginEnd="6dp" />
+
+                <TextView
+                    android:id="@+id/tvBergabung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:textColor="#E7E9EA"
+                    android:textSize="14sp"
+                    android:text="Bergabung 20 April 2025" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/tvFollow"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="31dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvbergabung">
+                <!-- "0 following" -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" /> <!-- Angka dibuat bold -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" following"
+                    android:textColor="#71767b"
+                    android:textSize="15sp" />
+                <!-- Tambahkan jarak -->
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content" />
+                <!-- "121 followers" -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="121"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" /> <!-- Angka dibuat bold -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" followers"
+                    android:textColor="#71767b"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/tvIndikator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFollow">
+
+                <!-- Tab -->
+                <LinearLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tabPost"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Post"
+                        android:textColor="#71767b"
+                        android:padding="12dp"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/tabReplies"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Replies"
+                        android:textColor="#71767b"
+                        android:padding="12dp"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/tabMedia"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Media"
+                        android:textColor="#71767b"
+                        android:padding="12dp"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <!-- Garis Biru Bergerak -->
+                <View
+                    android:id="@+id/underlineblue"
+                    android:layout_width="0dp"
+                    android:layout_height="4dp"
+                    android:layout_marginTop="-4dp"
+                    android:background="@color/blue" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/underline"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#71767b"
+                android:layout_marginTop="0dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvIndikator"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Tweet atau isi konten -->
+            <LinearLayout
+                android:id="@+id/isiTwitter1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/underline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <!-- Isi sesuai milik Anda -->
+                <ImageView
+                    android:id="@+id/imgProfileTwit1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/circle"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:src="@drawable/pp" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FriereN"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            android:layout_marginEnd="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@elfOfHimmel"
+                            android:textSize="15sp"
+                            android:layout_marginEnd="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" . 11 menit"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/menu"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="45dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🧙Frieren: Waktu berjalan pelan tapi pasti, menggiring semua yang hidup menuju perubahan yang tak bisa dihindari, memudarkan warna-warna masa lalu menjadi abu-abu nostalgia, mengganti tawa menjadi sunyi yang merambat dalam hati, mengikis detail-detail kecil yang dulu terasa penting, namun di tengah semua yang hilang dan tergantikan, hanya kenangan yang tetap tinggal seperti bayangan di balik kelopak mata yang tak bisa dihapus, seperti gema dari kata-kata yang pernah diucapkan namun kini tak bisa lagi diulang, seperti siluet seseorang yang pernah dekat tapi kini hanya hidup di ingatan, mengajarkan kita bahwa tak ada yang abadi kecuali rasa yang tertinggal, yang diam-diam tumbuh jadi bagian dari diri—tak terlihat, tapi selalu ada, berbisik lembut di sela detak jantung yang mencoba tetap kuat, walau perlahan kita menyadari bahwa yang dulu nyata kini hanya serpihan waktu yang enggan pergi, menolak larut, terus menetap sebagai bagian dari cerita yang tak akan pernah benar-benar selesai, sebab kenangan adalah satu-satunya yang bertahan saat segalanya telah berubah, dan meski waktu terus memutar roda takdirnya, ia tak mampu menjamah ruang di mana perasaan pernah tumbuh tulus, dan di sanalah kenangan tetap hidup: diam, setia, dan tak tersentuh."
+                        android:textStyle="bold"
+                        android:textColor="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Ikon dan angka -->
+                        <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/komen" android:layout_marginEnd="4dp" android:layout_marginTop="3dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1423" android:layout_marginEnd="15dp" />
+
+                        <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/repost" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="442" android:layout_marginEnd="15dp" />
+
+                        <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/suka" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8232" android:layout_marginEnd="10dp" />
+
+                        <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/grafik" android:layout_marginEnd="35dp" />
+                        <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/simpan" android:layout_marginEnd="35dp" />
+                        <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/share" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Garis bawah setelah tweet -->
+            <View
+                android:id="@+id/garisTwit"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#71767B80"
+                app:layout_constraintTop_toBottomOf="@id/isiTwitter1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <LinearLayout
+                android:id="@+id/containerTweets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/garisTwit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+</RelativeLayout>
+
+
+

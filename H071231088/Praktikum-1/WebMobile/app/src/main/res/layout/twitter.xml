@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/black">
+        <RelativeLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black">
+
+            <!-- Gambar di belakang -->
+            <ImageView
+                android:id="@+id/imagehome"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:contentDescription="@string/todo"
+                android:scaleType="centerCrop"
+                android:src="@drawable/home">
+            </ImageView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btn_kembali"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:contentDescription="@string/s"
+                    android:src="@drawable/kembali"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/grok"/>
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/telusuri"/>
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/menu2"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile"
+                android:background="@drawable/lingkaran"
+                android:clipToOutline="true"
+                android:layout_marginTop="80dp"
+                android:layout_marginStart="10dp"/>
+            <LinearLayout
+                android:id="@+id/btn_ikuti"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_below="@id/imagehome"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_toStartOf="@id/btn_ikuti"
+                    android:src="@drawable/pesan" />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/follow"
+                    android:textColor="@color/black"
+                    app:cornerRadius="20dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_ikuti"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/nameProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FrireN"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@color/white">
+                </TextView>
+                <TextView
+                    android:id="@+id/nametag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@elfOfHimmel"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="15dp">
+                </TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pahlawan_penyihir"
+                    android:textSize="14sp"
+                    android:layout_below="@id/nametag"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15sp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_gravity="center">
+                    <!--negara-->
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="4dp"
+                        android:contentDescription="@string/asal_negara"
+                        android:src="@drawable/lokasi" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Indonesia"
+                        android:textColor="#71767b"
+                        android:textSize="14sp"
+                        android:layout_marginEnd="40dp"
+                        android:gravity="center_vertical"/>
+                    <!--ulang tahun-->
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="4dp"
+                        android:contentDescription="@string/asal_negara"
+                        android:src="@drawable/balon" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="31 march 2025"
+                        android:textColor="#71767b"
+                        android:textSize="14sp"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp">
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="4dp"
+                        android:contentDescription="@string/asal_negara"
+                        android:src="@drawable/kalender" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Joined August 1945"
+                        android:textColor="#71767b"
+                        android:textSize="14sp"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_gravity="center_vertical">
+                    <!-- "0 following" -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/> <!-- Angka dibuat bold -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" following"
+                        android:textColor="#71767b"
+                        android:textSize="15sp"/>
+                    <!-- Tambahkan jarak -->
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="wrap_content"/>
+                    <!-- "121 followers" -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="121"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/> <!-- Angka dibuat bold -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" followers"
+                        android:textColor="#71767b"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Not followed by anyone you're following"
+                    android:textSize="10sp"/>
+
+                <!-- Bagian navmenu-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp">
+
+                    <TextView
+                        android:id="@+id/tabPost"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Post"
+                        android:textSize="16sp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tabReplies"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Replies"
+                        android:textSize="16sp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tabMedia"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Media"
+                        android:textSize="16sp"
+                        android:gravity="center" />
+                </LinearLayout>
+                <!-- Garis indikator -->
+                <View
+                    android:id="@+id/tabIndicator"
+                    android:layout_width="60dp"
+                    android:layout_height="3dp"
+                    android:background="@color/blue"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="40dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#71767B80" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/profile"
+                        android:background="@drawable/lingkaran"
+                        android:clipToOutline="true" />
+
+                    <!--disini twitnya-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FriereN"
+                                android:textStyle="bold"
+                                android:textSize="15sp"
+                                android:textColor="@color/white"
+                                android:layout_marginEnd="5dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@elfOfHimmel"
+                                android:textSize="15sp"
+                                android:layout_marginEnd="5dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" . 11 menit"
+                                android:textSize="15sp"/>
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/menu"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="45dp"/>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="🧙‍♀️ Frieren: Waktu mengubah segalanya, kecuali kenangan. Tapi pada akhirnya, kenangan pun akan memudar... Kecuali hutang, itu selalu diingat. 🤔✨.....\n#RenunganElf"
+                            android:textStyle="bold"
+                            android:textColor="@color/white" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/komen"
+                                android:layout_gravity="center"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:text="1423"
+                                android:layout_marginEnd="15dp"/>
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/repost"
+                                android:layout_gravity="center" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:text="442"
+                                android:layout_marginEnd="15dp"/>
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/suka"
+                                android:layout_gravity="center" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:text="8232"
+                                android:layout_marginEnd="10dp"/>
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/grafik"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="35dp"/>
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/simpan"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="35dp"/>
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/share"
+                                android:layout_gravity="center"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#71767B80" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/profile"
+                        android:background="@drawable/lingkaran"
+                        android:clipToOutline="true" />
+
+                    <!--disini twitnya-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FriereN"
+                                android:textStyle="bold"
+                                android:textSize="15sp"
+                                android:textColor="@color/white"
+                                android:layout_marginEnd="5dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@elfOfHimmel"
+                                android:textSize="15sp"
+                                android:layout_marginEnd="5dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" . 11 menit"
+                                android:textSize="15sp"/>
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/menu"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="45dp"/>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Keabadian itu sepi… makanya aku butuh kopi. ☕✨ \n#ElfFilosofi"
+                            android:textStyle="bold"
+                            android:textColor="@color/white" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/komen"
+                                android:layout_gravity="center"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:text="1423"
+                                android:layout_marginEnd="15dp"/>
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/repost"
+                                android:layout_gravity="center" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:text="442"
+                                android:layout_marginEnd="15dp"/>
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/suka"
+                                android:layout_gravity="center" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:text="8232"
+                                android:layout_marginEnd="10dp"/>
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/grafik"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="35dp"/>
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/simpan"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="35dp"/>
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/share"
+                                android:layout_gravity="center"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/profile"
+                        android:background="@drawable/lingkaran"
+                        android:clipToOutline="true" />
+
+                    <!--disini twitnya-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FriereN"
+                                android:textStyle="bold"
+                                android:textSize="15sp"
+                                android:textColor="@color/white"
+                                android:layout_marginEnd="5dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@elfOfHimmel"
+                                android:textSize="15sp"
+                                android:layout_marginEnd="5dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" . 11 menit"
+                                android:textSize="15sp"/>
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/menu"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="45dp"/>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Keabadian itu sepi… makanya aku butuh kopi. ☕✨ \n#ElfFilosofi"
+                            android:textStyle="bold"
+                            android:textColor="@color/white" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/komen"
+                                android:layout_gravity="center"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:text="1423"
+                                android:layout_marginEnd="15dp"/>
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/repost"
+                                android:layout_gravity="center" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:text="442"
+                                android:layout_marginEnd="15dp"/>
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/suka"
+                                android:layout_gravity="center" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:text="8232"
+                                android:layout_marginEnd="10dp"/>
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/grafik"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="35dp"/>
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/simpan"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="35dp"/>
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/share"
+                                android:layout_gravity="center"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="22dp"
+        android:backgroundTint="@color/blue"
+        android:elevation="6dp"
+        android:contentDescription="Tambah"
+        app:fabSize="normal"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:scaleType="center" />
+
+</FrameLayout>
+
