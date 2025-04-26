@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pronouns_options">
+        <item>Pilih pronouns</item>
+        <item>He/Him</item>
+        <item>She/Her</item>
+        <item>They/Them</item>
+        <item>Non-Binary aowkaowk</item>
+    </string-array>
+</resources>
