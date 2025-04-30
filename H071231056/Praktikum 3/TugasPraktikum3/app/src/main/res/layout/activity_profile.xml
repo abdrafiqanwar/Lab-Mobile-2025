@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Profile section -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:civ_border_width="2dp"
+            tools:src="@drawable/bbq_sauce" />
+
+        <TextView
+            android:id="@+id/textUsernameProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageProfile"
+            app:layout_constraintTop_toTopOf="@+id/imageProfile"
+            tools:text="Username" />
+
+        <TextView
+            android:id="@+id/textBio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/textUsernameProfile"
+            app:layout_constraintStart_toStartOf="@+id/textUsernameProfile"
+            app:layout_constraintTop_toBottomOf="@+id/textUsernameProfile"
+            tools:text="Bio description here" />
+
+        <!-- Highlights section -->
+        <TextView
+            android:id="@+id/textHighlightsHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Highlights"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/imageProfile"
+            app:layout_constraintTop_toBottomOf="@+id/imageProfile" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerHighlight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textHighlightsHeader"
+            tools:listitem="@layout/item_highlight" />
+
+        <!-- Feed grid section -->
+        <TextView
+            android:id="@+id/textFeedHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Posts"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textHighlightsHeader"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerHighlight" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerGridFeed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFeedHeader"
+            tools:listitem="@layout/item_feed_profile" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddProfilePost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:contentDescription="Add new post"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerGridFeed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
