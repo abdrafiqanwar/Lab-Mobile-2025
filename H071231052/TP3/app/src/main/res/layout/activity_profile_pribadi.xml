@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:id="@+id/topProfile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="1dp"
+        android:weightSum="7"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUsernameProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/maysakz"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginStart="20dp"
+            android:layout_weight="7" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/dotmenu_icon"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/topProfile2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topProfile"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/fotoProfil"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/oip"
+            />
+
+        <LinearLayout
+            android:id="@+id/dataDiri"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="15dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUsernameProfile2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/maysakz"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/bagianFollow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:weightSum="6">
+
+                <LinearLayout
+                    android:id="@+id/bagianPostingan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="2"
+
+                    >
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPostinganCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="2"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPostingan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="post"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bagianFollowers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="2">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFollowersCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="947"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFollowers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="followers"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bagianFollowing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="2">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFollowingCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="309"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFollowing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="following"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/topProfile3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topProfile2"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bioProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/maysa_nlivestream_on_youtube_maysa_kz_n_contact_maysakz_business_gmail_com"
+            android:textColor="@color/white"
+            />
+
+        <LinearLayout
+            android:id="@+id/bagianButton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingTop="7dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/buttonFollow"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:text="Edit Profile"
+                android:textColor="@color/white"
+                android:background="@drawable/button_transparan"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:layout_marginEnd="20dp"
+                />
+
+            <Button
+                android:id="@+id/buttonMsg"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:text="Share profile"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:background="@drawable/button_transparan"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bagianHighlight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topProfile3"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <FrameLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="4dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/transparent_image"
+                    app:civ_border_color="@color/highlight"
+                    app:civ_border_width="2dp" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/fotoHighlight"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/oip"
+                    app:civ_border_width="0dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/namaHighlight"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/maysakz"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/setelahHighlight"
+        android:layout_below="@id/bagianHighlight"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
+        android:weightSum="3"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_grid"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_reels_unactive"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_share"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/profile_feed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setelahHighlight"
+        android:layout_alignBottom="@id/nav_bar_bot"
+        />
+
+    <LinearLayout
+        android:background="@color/black"
+        android:id="@+id/nav_bar_bot"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="13dp"
+        >
+
+        <ImageView
+            android:id="@+id/backHome"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home_unactive"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search_unactive"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/postingFoto"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_post"
+            android:layout_weight="1"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_reels_unactive"
+            android:layout_weight="1"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/halamanAkun"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/oip"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</RelativeLayout>
