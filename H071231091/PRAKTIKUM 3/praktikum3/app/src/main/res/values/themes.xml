@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base Theme for Light Mode -->
+    <style name="Base.Theme.Praktikum3" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Tambahkan penyesuaian khusus untuk mode terang di sini -->
+        <!-- Contoh: -->
+        <!-- <item name="colorPrimary">@color/primary_light</item> -->
+    </style>
+
+    <!-- Main App Theme -->
+    <style name="Theme.Praktikum3" parent="Base.Theme.Praktikum3" />
+
+    <!-- Custom Text Style -->
+    <style name="CustomTextStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#000000</item> <!-- Black text -->
+    </style>
+
+</resources>
