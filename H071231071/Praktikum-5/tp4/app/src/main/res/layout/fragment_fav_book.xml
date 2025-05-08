@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FavBookFragment"
+    android:background="@color/white">
+
+    <!-- TextView untuk judul -->
+
+    <!-- RecyclerView untuk menampilkan daftar buku favorit -->
+    <TextView
+        android:id="@+id/text_fav_books_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:text="Your Favorite Book"
+        android:textColor="@color/primary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-smallcaps"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_fav_books"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:layout_marginTop="50dp"/> <!-- Memberikan jarak antara TextView dan RecyclerView -->
+
+    <TextView
+        android:id="@+id/emptyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buku favorit tidak ada"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:textColor="@android:color/darker_gray"/>
+
+</FrameLayout>
