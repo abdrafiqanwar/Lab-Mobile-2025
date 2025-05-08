@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Warna utama aplikasi -->
+    <color name="primary">#850E37</color>
+    <color name="primary_dark">#5D0A27</color>
+    <color name="primary_light">#B0305B</color>
+
+    <!-- Warna sekunder untuk aksen -->
+    <color name="secondary">#A6133B</color>
+    <color name="secondary_light">#FFE6ED</color>
+    <color name="secondary_dark">#720D28</color>
+
+    <!-- Warna untuk teks -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+
+    <!-- Warna untuk chips -->
+    <color name="chip_fiction">#FFE6ED</color>
+    <color name="chip_business">#F8BBD0</color>
+    <color name="chip_marketing">#F5E2E7</color>
+    <color name="chip_science">#FFDCE4</color>
+    <color name="chip_default">#F5F5F5</color>
+
+    <!-- Warna latar belakang -->
+    <color name="background">#FAFAFA</color>
+    <color name="card_background">#FFFFFF</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
