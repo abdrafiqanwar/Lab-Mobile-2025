@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".FavoritesFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/search_custom" />
+
+            <ProgressBar
+                android:id="@+id/loading_progress"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:indeterminateTint="@color/abu"
+                app:layout_constraintTop_toBottomOf="@id/search"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/all_genres"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/abu"
+                        android:text="All Genres"
+                        android:textColor="@color/penulis"
+                        android:textSize="16sp"
+                        app:cornerRadius="8dp"
+                        app:strokeColor="@color/abu"
+                        app:strokeWidth="1dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/romance"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/background"
+                        android:text="Romance"
+                        android:textColor="@color/penulis"
+                        android:textSize="16sp"
+                        app:cornerRadius="8dp"
+                        app:strokeColor="@color/abu"
+                        app:strokeWidth="1dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/fantasy"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/background"
+                        android:text="Fantasy"
+                        android:textColor="@color/penulis"
+                        android:textSize="16sp"
+                        app:cornerRadius="8dp"
+                        app:strokeColor="@color/abu"
+                        app:strokeWidth="1dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/scifi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/background"
+                        android:text="Sci-Fi"
+                        android:textColor="@color/penulis"
+                        android:textSize="16sp"
+                        app:cornerRadius="8dp"
+                        app:strokeColor="@color/abu"
+                        app:strokeWidth="1dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/thriller"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/background"
+                        android:text="Thriller"
+                        android:textColor="@color/penulis"
+                        android:textSize="16sp"
+                        app:cornerRadius="8dp"
+                        app:strokeColor="@color/abu"
+                        app:strokeWidth="1dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/horror"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/background"
+                        android:text="Horror"
+                        android:textColor="@color/penulis"
+                        android:textSize="16sp"
+                        app:cornerRadius="8dp"
+                        app:strokeColor="@color/abu"
+                        app:strokeWidth="1dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/drama"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/background"
+                        android:text="Drama"
+                        android:textColor="@color/penulis"
+                        android:textSize="16sp"
+                        app:cornerRadius="8dp"
+                        app:strokeColor="@color/abu"
+                        app:strokeWidth="1dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/history"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/background"
+                        android:text="History"
+                        android:textColor="@color/penulis"
+                        android:textSize="16sp"
+                        app:cornerRadius="8dp"
+                        app:strokeColor="@color/abu"
+                        app:strokeWidth="1dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/comedy"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/background"
+                        android:text="Comedy"
+                        android:textColor="@color/penulis"
+                        android:textSize="16sp"
+                        app:cornerRadius="8dp"
+                        app:strokeColor="@color/abu"
+                        app:strokeWidth="1dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/slice_of_life"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/background"
+                        android:text="Slice of Life"
+                        android:textColor="@color/penulis"
+                        android:textSize="16sp"
+                        app:cornerRadius="8dp"
+                        app:strokeColor="@color/abu"
+                        app:strokeWidth="1dp" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bookRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                tools:listitem="@layout/book_item" />
+
+            <LinearLayout
+                android:id="@+id/empty_favorites"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="100dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/kosong" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="There are no books in favorites."
+                    android:textAlignment="center"
+                    android:textColor="@color/penulis"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFDF6</color>
+    <color name="hint">#74FFFFFF</color>
+    <color name="detail_data">#7FBFA054</color>
+    <color name="background">#0C0F14</color>
+    <color name="judul">#2F2F2F</color>
+    <color name="penulis">#DFD0B8</color>
+    <color name="transparent">#00000000</color>
+    <color name="abu">#393E46</color>
+</resources>
