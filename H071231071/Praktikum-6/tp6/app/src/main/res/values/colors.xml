@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Add these colors to your colors.xml file -->
+
+    <!-- Rick and Morty Theme Colors -->
+    <color name="portal_green">#7DF049</color>
+    <color name="portal_green_dark">#45B649</color>
+    <color name="portal_green_darker">#17882A</color>
+    <color name="title_green">#A7E22E</color>
+    <color name="subtitle_blue">#65C9FF</color>
+    <color name="card_background_dark">#1E2022</color>
+    <color name="card_background_darker">#232729</color>
+    <color name="card_background_gradient_end">#2A3035</color>
+
+    <!-- Space background colors -->
+    <color name="space_dark">#0B0C10</color>
+    <color name="space_medium">#1F2833</color>
+
+    <!-- Accent colors -->
+    <color name="yellow_accent">#F0E14A</color>
+    <color name="pink_accent">#FF3E80</color>
+
+    <!-- Keep your existing colors below -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+</resources>
