@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="170dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="5dp"
+    android:backgroundTint="#1E2022">  <!-- Dark background color like the show's space theme -->
+
+    <LinearLayout
+        android:id="@+id/theCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Portal-like frame for book cover -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp">
+
+            <!-- Portal background -->
+            <ImageView
+                android:layout_width="145dp"
+                android:layout_height="190dp"
+                android:scaleType="fitXY"/>
+
+            <!-- Book Cover Image -->
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="135dp"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_launcher_background"
+                android:contentDescription="Book Cover"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="@drawable/card_gradient_background">
+
+            <!-- Book Title -->
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#A7E22E"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <!-- Book Author -->
+            <TextView
+                android:id="@+id/tvSpecies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Species"
+                android:textSize="14sp"
+                android:textColor="#65C9FF"
+                android:layout_marginTop="4dp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
