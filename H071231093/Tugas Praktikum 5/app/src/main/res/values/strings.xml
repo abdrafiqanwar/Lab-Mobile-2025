@@ -1,0 +1,30 @@
+<resources>
+    <string-array name="genre_array">
+        <item>Fiction</item>
+        <item>Non-Fiction</item>
+        <item>Fantasy</item>
+        <item>Biography</item>
+        <item>History</item>
+        <item>Romance</item>
+        <item>Mystery</item>
+        <item>Horror</item>
+        <item>Drama</item>
+        <item>Other</item>
+    </string-array>
+    <string name="app_name">Praktikum5</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="genre_array_filter">
+        <item>All</item>
+        <item>Fiction</item>
+        <item>Non-Fiction</item>
+        <item>Fantasy</item>
+        <item>Biography</item>
+        <item>History</item>
+        <item>Romance</item>
+        <item>Mystery</item>
+        <item>Horror</item>
+        <item>Drama</item>
+        <item>Other</item>
+    </string-array>
+</resources>
