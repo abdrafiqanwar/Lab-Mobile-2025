@@ -1,0 +1,8 @@
+<de.hdodenhof.circleimageview.CircleImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/img_add"
+    android:layout_width="65dp"
+    android:layout_height="65dp"
+    android:layout_margin="6dp"
+    android:src="@drawable/ic_hl"
+    android:scaleType="centerCrop"/>
+

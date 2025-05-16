@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<de.hdodenhof.circleimageview.CircleImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/img_highlight"
+    android:layout_width="65dp"
+    android:layout_height="65dp"
+    android:layout_margin="6dp"
+    android:scaleType="centerCrop" />
