@@ -1,0 +1,5 @@
+<resources>
+    <color name="colorPrimary">#6200EE</color> <!-- atau sesuaikan warnanya -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- jika dibutuhkan -->
+    <color name="colorAccent">#03DAC5</color> <!-- jika dibutuhkan -->
+</resources>

@@ -1,0 +1,46 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view_books"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Search books" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_books"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!-- TextView untuk "Buku tidak ditemukan" di atas RecyclerView -->
+    <TextView
+        android:id="@+id/text_view_no_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buku tidak ditemukan"
+        android:textSize="28sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:padding="16dp" />
+
+
+</FrameLayout>
