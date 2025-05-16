@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/feedDetailLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".FeedDetailActivity">
+
+    <!-- Gambar Feed -->
+    <ImageView
+        android:id="@+id/imageFeedDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cheese"
+        android:contentDescription="Feed Image" />
+
+    <!-- Caption di atas gambar, di bagian bawah -->
+    <TextView
+        android:id="@+id/textFeedDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#80000000"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:text="Feed detail caption here"
+        android:maxLines="3"
+        android:ellipsize="end" />
+
+</FrameLayout>
