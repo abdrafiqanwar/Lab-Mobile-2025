@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">tp8</string>
+    <string name="title">Judul</string>
+    <string name="desc">Deskripsi</string>
+    <string name="save">Save</string>
+    <string name="change">Change</string>
+    <string name="delete">Delete</string>
+</resources>
