@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Tuprak 8</string>
+
+    <string name="notes_toolbar_title">Notes</string>
+    <string name="search_hint">Search notes by title...</string>
+    <string name="clear_search_description">Clear Search</string>
+    <string name="no_search_results">No results found for \"%s\"</string>
+    <string name="no_data_available">No notes available</string>
+    <string name="add_note_fab_description">Add Note</string>
+
+
+    <string name="add_note_toolbar_title">Tambah</string>
+    <string name="edit_note_toolbar_title">Ubah</string>
+    <string name="title_input_hint">Judul</string>
+    <string name="content_input_hint">Deskripsi</string>
+    <string name="button_submit_text">SUBMIT</string>
+    <string name="button_update_text">UPDATE</string>
+    <string name="save_note_error_title_empty">Title cannot be empty</string>
+    <string name="save_note_error_content_empty">Content cannot be empty</string>
+    <string name="error_saving_note">Error saving note</string>
+    <string name="error_updating_note">Error updating note</string>
+
+    <string name="action_delete">Delete</string>
+    <string name="delete_note_dialog_title">Hapus Note</string>
+    <string name="delete_note_dialog_message">Apakah anda yakin ingin menghapus item ini?</string>
+    <string name="dialog_button_yes">YA</string>
+    <string name="dialog_button_no">TIDAK</string>
+    <string name="error_deleting_note">Error deleting note</string>
+
+    <string name="created_at_prefix">Created at %1$s</string>
+    <string name="updated_at_prefix">Updated at %1$s</string>
+
+</resources>
