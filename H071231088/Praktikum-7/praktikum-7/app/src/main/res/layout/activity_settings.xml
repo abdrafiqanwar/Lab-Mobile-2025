@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pengaturan Tema"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgThemeMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="32dp">
+
+        <RadioButton
+            android:id="@+id/rbLightMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tema Terang"
+            android:minHeight="48dp"/>
+
+        <RadioButton
+            android:id="@+id/rbDarkMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tema Gelap"
+            android:minHeight="48dp"/>
+
+        <RadioButton
+            android:id="@+id/rbSystemMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ikuti Pengaturan Sistem"
+            android:minHeight="48dp"
+            android:checked="true"/> </RadioGroup>
+
+    <Button
+        android:id="@+id/btnSaveTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Simpan Perubahan"/>
+
+</LinearLayout>
