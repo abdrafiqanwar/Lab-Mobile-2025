@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2196F3"
+        app:title="@string/notes_toolbar_title"
+        app:titleTextColor="@android:color/white"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <LinearLayout
+        android:id="@+id/search_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_main"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@color/white"
+        android:elevation="2dp">
+
+        <EditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/search_hint"
+            android:textColor="@color/black"
+            android:textColorHint="#929292"
+            android:inputType="text"
+            android:padding="12dp"
+            android:background="@drawable/search_edittext_background"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:drawablePadding="8dp"/>
+
+        <ImageButton
+            android:id="@+id/buttonClearSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/clear_search_description"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewNotes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_bar_layout"
+        android:layout_above="@+id/fab_add_note"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        android:clipToPadding="false"/>
+
+    <TextView
+    android:id="@+id/textViewNoData"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_marginStart="32dp"
+    android:layout_marginEnd="32dp"
+    android:background="@drawable/no_data_background"
+    android:gravity="center"
+    android:padding="16dp"
+    android:text="@string/no_data_available"
+    android:textColor="@color/black"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:visibility="gone" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fab_add_note"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:layout_margin="24dp"
+    android:src="@drawable/ic_add"
+    app:backgroundTint="#006BCD"
+    app:tint="@android:color/white"
+    android:contentDescription="@string/add_note_fab_description"/>
+
+</RelativeLayout>
